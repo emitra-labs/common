@@ -1,14 +1,12 @@
 package cases
 
 import (
-	"strconv"
 	"strings"
 
 	"github.com/iancoleman/strcase"
 )
 
 func ToSentence(s string) string {
-	delimiter, _ := strconv.Atoi(" ")
-	sentence := strcase.ToDelimited(s, uint8(delimiter))
+	sentence := strcase.ToDelimited(s, ' ')
 	return strings.ToUpper(sentence[:1]) + sentence[1:]
 }
